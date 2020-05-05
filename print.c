@@ -18,8 +18,8 @@ struct PTInfo
 void printTab(FILE *fp, struct PTInfo p)
 {
   double i;
-  fprintf(fp,"+========+=========+\n");
-  fprintf(fp,"|     x     |    f(x)    |\n");
+  fprintf(fp,"+=========+=========+\n");
+  fprintf(fp,"|    x    |   f(x)  |\n");
   fprintf(fp,"+=========+=========+\n");
   for(i=p.a;i<=p.b;i+=p.step)
    if (EOF==fprintf(fp,"|  %5.4lf |  %5.4lf |\n",i,(*p.f)(i))) err("Can’t write");
